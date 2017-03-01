@@ -19,12 +19,12 @@ if (!defined('WPINC')) {
 }
 
 /**
- * Set default values
+ * Set default settings
  */
 function activation()
 {
     if (empty(get_option('ckbr_settings'))) {
-        $default_options = [
+        $default_settings = [
             'banner-text'   => 'This site uses cookies to enhance your experience.',
             'confirm-text'  => 'Ok',
             'deny-text'     => 'Learn More',
@@ -32,7 +32,7 @@ function activation()
             'expires'       => '30',
             'path'          => '/'
         ];
-    	update_option('ckbr_settings', $default_options);
+    	update_option('ckbr_settings', $default_settings);
     }
 }
 register_activation_hook(__FILE__, __NAMESPACE__ . '\\activation');
