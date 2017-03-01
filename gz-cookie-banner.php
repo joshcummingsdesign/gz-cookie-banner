@@ -11,22 +11,44 @@
  * Domain Path: /languages
  */
 
+namespace CKBR;
+
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
     die;
 }
 
 /**
+ * Set default values
+ */
+function activation()
+{
+    if (empty(get_option('ckbr_settings'))) {
+        $default_options = [
+            'banner-text'   => 'This site uses cookies to enhance your experience.',
+            'confirm-text'  => 'Ok',
+            'deny-text'     => 'Learn More',
+            'deny-redirect' => '/',
+            'expires'       => '30',
+            'path'          => '/'
+        ];
+    	update_option('ckbr_settings', $default_options);
+    }
+}
+register_activation_hook(__FILE__, __NAMESPACE__ . '\\activation');
+
+
+/**
  * Register plugin settings
  */
-function ckbr_register_settings()
+function register_settings()
 {
     register_setting('ckbr_settings_group', 'ckbr_settings');
 }
-add_action('admin_init', 'ckbr_register_settings');
+add_action('admin_init', __NAMESPACE__ . '\\register_settings');
 
 /**
- * Initialize admin and public content
+ * Initialize admin and frontend content
  */
-require_once('public/ckbr-public.php');
-require_once('admin/ckbr-admin.php');
+require_once('frontend/frontend.php');
+require_once('admin/admin.php');

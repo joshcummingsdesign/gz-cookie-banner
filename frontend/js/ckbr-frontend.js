@@ -1,5 +1,5 @@
-/*global Cookies */
-/*global settings */
+/* global Cookies */
+/* global settings */
 
 (function ($) {
   'use strict';
@@ -8,7 +8,7 @@
    * Shows and hides cookie banner
    * @return {undefined}
    */
-  var checkJsCookie = function () {
+  var cookieBanner = function () {
 
     // Return early if cookie is set
     if (Cookies.get('ckbr_verify')) {
@@ -32,17 +32,15 @@
     }
   };
 
-  var jsCookieScript = 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js';
-
   /**
-   * Check to see if js-cookie is enqueued
+   * Checks for js-cookie and initializes
    * @return {undefined}
    */
   var ckbrInit = function () {
     if (typeof(Cookies) === 'undefined') {
-      $.getScript(jsCookieScript, checkJsCookie);
+      $.getScript(settings.jsCookie, cookieBanner);
     } else {
-      checkJsCookie();
+      cookieBanner();
     }
   };
 
