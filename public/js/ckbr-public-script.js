@@ -4,13 +4,11 @@
 (function ($) {
   'use strict';
 
+  /**
+   * Shows and hides cookie banner
+   * @return {undefined}
+   */
   var checkJsCookie = function () {
-
-    // Make sure js-cookie is installed
-    if (typeof(Cookies) === 'undefined') {
-      console.error('js-cookie not installed!');
-      return;
-    }
 
     // Return early if cookie is set
     if (Cookies.get('ckbr_verify')) {
@@ -20,7 +18,7 @@
       // Otherwise prompt the user to accept the terms
       var $banner  = $('#ckbr_banner'),
           $confirm = $('#ckbr_confirm'),
-          expires   = parseInt(settings.expires) || 30,
+          expires  = parseInt(settings.expires) || 30,
           path     = settings.path || '/';
 
       $banner.removeClass('ckbr_hidden');
@@ -34,8 +32,22 @@
     }
   };
 
+  var jsCookieScript = 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js';
+
+  /**
+   * Check to see if js-cookie is enqueued
+   * @return {undefined}
+   */
+  var ckbrInit = function () {
+    if (typeof(Cookies) === 'undefined') {
+      $.getScript(jsCookieScript, checkJsCookie);
+    } else {
+      checkJsCookie();
+    }
+  };
+
   $(document).ready(function () {
-    checkJsCookie();
+    ckbrInit();
   });
 
 })(jQuery);
