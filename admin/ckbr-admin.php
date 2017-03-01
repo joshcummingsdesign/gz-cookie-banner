@@ -1,9 +1,8 @@
 <?php
 
-/*======================================
-=            Add Admin Menu            =
-======================================*/
-
+/**
+ * Add admin menu
+ */
 function ckbr_add_admin_menu()
 {
     add_submenu_page(
@@ -17,13 +16,12 @@ function ckbr_add_admin_menu()
 }
 add_action('admin_menu', 'ckbr_add_admin_menu');
 
-
-/*=============================================
-=            Display Admin Content            =
-=============================================*/
-
+/**
+ * Display admin content
+ * @return void
+ */
 function ckbr_display_admin_content()
 {
     $settings = get_option('ckbr_settings');
-    include('partials/ckbr-admin-content.php');
+    require_once('partials/ckbr-admin-content.php');
 }

@@ -1,13 +1,9 @@
 <?php
-/*====================================
-=           Public Content           =
-====================================*/
-
+// TODO: Separate view from logic
 $banner_text  = $settings['banner-text'] ?? '';
 $confirm_text = $settings['confirm-text'] ?? '';
 $deny_text    = $settings['deny-text'] ?? '';
 $redirect     = $settings['redirect'] ?? '#';
-
 ?>
 
 <aside id="ckbr_banner" class="ckbr_hidden">
