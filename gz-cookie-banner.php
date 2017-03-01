@@ -19,6 +19,16 @@ if (!defined('WPINC')) {
 }
 
 /**
+ * Check for updates
+ */
+require_once('includes/vendor/plugin-update-checker/plugin-update-checker.php');
+$myUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
+    'https://update.madebygrizzly.com/wp-update-server/?action=get_metadata&slug=gz-cookie-banner',
+    __FILE__,
+    'gz-cookie-banner'
+);
+
+/**
  * Set default settings
  */
 function activation()
@@ -36,7 +46,6 @@ function activation()
     }
 }
 register_activation_hook(__FILE__, __NAMESPACE__ . '\\activation');
-
 
 /**
  * Register plugin settings

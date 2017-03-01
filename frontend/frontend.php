@@ -27,6 +27,7 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\frontend_assets');
  */
 function frontend_content()
 {
+    require_once('includes/functions.php');
     require_once('partials/controller.php');
     require_once('partials/view.php');
 }

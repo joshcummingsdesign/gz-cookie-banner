@@ -1,23 +1,26 @@
 === Grizzly Cookie Banner ===
 Contributors: joshcummingsdesign
-Donate link: http://www.joshcummingsdesign.com
-Tags: cookies, cookie, banner, notification, accept, alert, confirm, deny, redirect
-Requires at least: 4.2
-Tested up to: 4.4.2
-Stable tag: 1.0
+Tags: cookies, notifications, banner, modal, popup, notify, alert
+Requires at least: 4.7.2
+Tested up to: 4.7.2
+Stable tag: 4.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add a banner to your site that lets users know you are using cookies.
+A simple way to let your users know you are using cookies on your WordPress site.
 
 == Description ==
 
-[Grizzly Cookie Banner](https://github.com/joshcummingsdesign/gz-cookie-banner) is a plugin for WordPress that allows you to add a banner that lets users know you are using cookies.
+[Grizzly Cookie Banner](https://github.com/joshcummingsdesign/gz-cookie-banner) is a WordPress plugin that allows you notify your users you are using cookies on your site.
+
+== Installation ==
+
+This plugin requires PHP 7.
 
 == Changelog ==
 
 = 1.0 =
-* Initial release
+* Initial release.
 
 == Upgrade Notice ==
 

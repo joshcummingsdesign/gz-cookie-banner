@@ -23,6 +23,7 @@ add_action('admin_menu', __NAMESPACE__ . '\\admin_menu');
  */
 function admin_content()
 {
+    require_once('includes/functions.php');
     require_once('partials/controller.php');
     require_once('partials/view.php');
 }
