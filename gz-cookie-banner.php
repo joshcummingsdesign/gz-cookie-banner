@@ -1,10 +1,11 @@
 <?php
 /**
  * Plugin Name: Grizzly Cookie Banner
- * Description: Add a banner to your site that lets users know you are using cookies.
+ * Plugin URI:  https://github.com/joshcummingsdesign/gz-cookie-banner
+ * Description: A simple way to let your users know you are using cookies on your WordPress site.
  * Version:     1.0
- * Author:      Josh Cummings
- * Author URI:  https://www.joshcummingsdesign.com
+ * Author:      Grizzly
+ * Author URI:  https://madebygrizzly.com
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: ckbr

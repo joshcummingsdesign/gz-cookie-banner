@@ -1,3 +1,3 @@
 # Grizzly Cookie Banner
 
-Add a banner to your WordPress site that lets users know you are using cookies.
+A simple way to let your users know you are using cookies on your WordPress site.
