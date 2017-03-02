@@ -1,5 +1,7 @@
 # Grizzly Cookie Banner
 
+[![semantic versioning](https://img.shields.io/github/release/joshcummingsdesign/gz-cookie-banner.svg)](https://github.com/joshcummingsdesign/gz-cookie-banner)
+
 A simple way to let your users know you are using cookies on your WordPress site.
 
 ## Template Override
