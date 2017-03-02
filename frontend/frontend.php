@@ -29,6 +29,13 @@ function frontend_content()
 {
     require_once('includes/functions.php');
     require_once('partials/controller.php');
-    require_once('partials/view.php');
+
+    // Check for partials/gz-cookie-banner.php template override
+    // The $settings variable is available in template override
+    if (locate_template('partials/gz-cookie-banner.php')) {
+        require_once(locate_template('partials/gz-cookie-banner.php'));
+    } else {
+        require_once('partials/view.php');
+    }
 }
 add_action('wp_footer', __NAMESPACE__ . '\\frontend_content');
