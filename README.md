@@ -16,7 +16,7 @@ By default, Grizzly Cookie Banner gives you a default template to work with. Thi
 </aside>
 ```
 
-To override the default php template, create the file `partials/gz-cookie-banner.php` in your theme. You will then have access to the following variables:
+To override the default PHP template, create the file `partials/gz-cookie-banner.php` in your theme. You will then have access to the following variables:
 
 ```
 $settings     - The settings array
