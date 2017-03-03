@@ -49,6 +49,10 @@ class Frontend
         $redirect     = $settings['deny-redirect'] ?? '#';
 
         // View
-        require_once plugin_dir_path(dirname(__FILE__)).'frontend/partials/view.php';
+        if (locate_template('partials/gz-cookie-banner.php')) {
+            require_once(locate_template('partials/gz-cookie-banner.php'));
+        } else {
+            require_once plugin_dir_path(dirname(__FILE__)).'frontend/partials/view.php';
+        }
     }
 }
