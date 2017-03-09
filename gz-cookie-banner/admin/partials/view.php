@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="ckbr-wrap wrap">
     <h1><?= $heading ?></h1>
     <div id="poststuff">
         <div id="post-body" class="metabox-holder columns-2">

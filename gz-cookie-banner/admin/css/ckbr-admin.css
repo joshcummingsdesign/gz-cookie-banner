@@ -2,27 +2,27 @@
 =            Admin Styles            =
 ====================================*/
 
-.metabox-holder input,
-.metabox-holder textarea {
+.ckbr-wrap .metabox-holder input,
+.ckbr-wrap .metabox-holder textarea {
   width: 100%;
   display: block;
 }
 
-.metabox-holder input {
+.ckbr-wrap .metabox-holder input {
   max-width: 250px;
 }
 
-.metabox-holder textarea {
+.ckbr-wrap .metabox-holder textarea {
   max-width: 500px;
 }
 
-.spinner {
+.ckbr-wrap .spinner {
   float: left;
   margin-top: 25px;
   margin-left: 20px;
 }
 
-.submit-wrap .submit {
+.ckbr-wrap .submit-wrap .submit {
   float: left;
   padding-top: 0;
 }

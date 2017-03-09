@@ -4,6 +4,10 @@
 (function ($) {
   'use strict';
 
+  var jsCookie     = settings.jsCookie || '',
+      cookieExpire = parseInt(settings.expires) || 30,
+      cookiePath   = settings.path || '/';
+
   /**
    * Shows and hides cookie banner
    * @return {undefined}
@@ -18,8 +22,8 @@
       // Otherwise prompt the user to accept the terms
       var $banner  = $('#ckbr_banner'),
           $confirm = $('#ckbr_confirm'),
-          expires  = parseInt(settings.expires) || 30,
-          path     = settings.path || '/';
+          expires  = parseInt(cookieExpire),
+          path     = cookiePath;
 
       $banner.removeClass('ckbr_hidden');
 
@@ -38,7 +42,7 @@
    */
   var ckbrInit = function () {
     if (typeof(Cookies) === 'undefined') {
-      $.getScript(settings.jsCookie, cookieBanner);
+      $.getScript(jsCookie, cookieBanner);
     } else {
       cookieBanner();
     }

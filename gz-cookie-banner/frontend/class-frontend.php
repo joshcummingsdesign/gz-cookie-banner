@@ -21,7 +21,7 @@ class Frontend
 
     public function assets() {
         wp_enqueue_style($this->plugin_slug, plugin_dir_url(__FILE__).'css/ckbr-frontend.css', [], $this->version);
-        wp_register_script($this->plugin_slug, plugin_dir_url(__FILE__).'js/ckbr-frontend.js', ['jquery'], $this->version, true);
+        wp_register_script($this->plugin_slug, plugin_dir_url(__FILE__).'js/ckbr-frontend.js', ['jquery']);
 
         $settings = $this->settings;
 
